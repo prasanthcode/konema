@@ -1,0 +1,39 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(56, 161, 209);
+}
+.main {
+    display: flex;
+}
+.main form {
+  background-color: aliceblue;
+  text-align: center;
+  padding: 10px;
+  
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+
+.formItem input {
+    width: 90%;
+    margin: 10px 0;
+    border-width: 0 0 1px 0;
+    outline: none;
+    
+  
+}
+.main .pro-img {
+  background-color: aliceblue;
+    margin: 0px 50px 0 0;
+    padding: 10px;
+  text-align: center;
+  /* background-color: ; */
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+
+}

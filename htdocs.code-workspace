@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../../home/rgukt/food"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "htdocs"
+	}
+}

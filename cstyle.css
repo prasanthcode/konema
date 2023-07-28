@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 80px;
+  background: #ffffff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+}
+#navbar li {
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+}
+#navbar li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  transition: 0.3s ease;
+}
+#navbar li a:hover,
+#navbar li a.active {
+  color: #002ba1;
+}
+#navbar li a.active::after,
+#navbar li a:hover::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: #002ba1;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+#close {
+  display: none;
+}
+.mob {
+  display: none;
+  align-items: center;
+}
+.contact {
+  position: relative;
+  height: 100vh;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+
+  background-image: url("gallery/b5.jpg");
+  background-size: cover;
+}
+.contact .content {
+  max-width: 800px;
+  text-align: center;
+}
+.contact .content h2 {
+  font-size: 36px;
+  font-weight: 500;
+  color: #fff;
+}
+.contact .content h2 span {
+  font-size: 10px;
+
+  color: #222;
+}
+.contact .content p {
+  font-weight: 300;
+  color: #fff;
+}
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.container .contactInfo {
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+}
+.container .contactInfo .box {
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+}
+.container .contactInfo .box .icon {
+  min-width: 60px;
+  height: 60px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 22px;
+}
+.container .contactInfo .box .text {
+  display: flex;
+  margin-left: 20px;
+  font-size: 16px;
+  color: #fff;
+  flex-direction: column;
+  font-weight: 200;
+}
+.container .contactInfo .box .text h3 {
+  font-weight: 500;
+  color: rgb(255, 81, 0);
+}
+.contactForm {
+  width: 40%;
+  padding: 40px;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+}
+.contactForm h2 {
+  font-size: 30px;
+  color: #333;
+  font-weight: 500;
+}
+
+.contactForm .inputBox {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+.contactForm .inputBox input,
+textarea {
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+  resize: none;
+}
+.contactForm .inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  pointer-events: none;
+  transition: 0.5s;
+  color: #666;
+}
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span {
+  display: none;
+  transition: 0.3s ease;
+}
+.contactForm .inputBox input[type="submit"] {
+  width: 100%;
+  background: #2735ff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 50px;
+}
+.contactForm span{
+  font-weight: 700;
+}
+.contactForm .signup a {
+  color: rgb(43, 82, 255);
+  font-size: 16px;
+  text-decoration: none;
+}
+
+@media (max-width: 799px) {
+  .contact {
+    padding: 5px;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .container .contactInfo {
+    margin-bottom: 40px;
+  }
+  .container .contactInfo,
+  .contactForm {
+    width: 100%;
+  }
+
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    width: 300px;
+
+    background-color: rgb(219, 242, 255);
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    padding: 80px 0 0 10px;
+  }
+  #navbar.active {
+    right: 0px;
+    transition: 0.3s ease;
+  }
+  #navbar li {
+    margin-bottom: 25px;
+  }
+  .mob {
+    display: flex;
+  }
+  .mob i {
+    color: #1a1a1a;
+    font-size: 24px;
+    padding-left: 20px;
+  }
+  #close {
+    display: initial;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: #003655;
+    font-size: 24px;
+  }
+  #lg-bag {
+    display: none;
+  }
+}

@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+} /*
+.table{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    border-collapse: collapse;
+    width: 800px;
+    height: 200px;
+    border:1px solid rgb(206, 206, 206);
+    box-shadow: 2px 2px 12px rgba(0,0, 0, 0.2),-1px -1px 8px rgba(0,0, 0, 0.2);
+}
+.table tr{
+    transition: all .2s ease-in;
+    cursor: pointer;
+}
+.table th,td{
+    padding:12px;
+    text-align: left;
+    border-bottom: 1px solid rgb(182, 182, 182);
+}
+#header {
+    background-color: rgb(0, 164, 170);
+    color: #fff;
+    
+}
+a{
+    text-decoration: none;
+    padding: 3px 15px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 128, 128);
+    border-radius: 5px;
+}
+a:hover{
+    
+    background-color: rgb(255, 78, 78);
+    transition: all .2s ease-in;
+    
+}
+h1{
+    font-weight: 600;
+    text-align: center;
+    background-color:  rgb(0, 164, 170);
+    color: #fff;
+    padding: 10px 0px;
+
+}
+.table tr:hover{
+    background-color:  rgb(238, 238, 238);
+    transition: scale(1.02);
+    box-shadow: 2px 2px 12px rgba(0,0, 0, 0.2),-1px -1px 8px rgba(0,0, 0, 0.2);
+}
+ */
+
+h1 {
+  font-size: 50px;
+  line-height: 64px;
+  color: #222;
+}
+h2 {
+  font-size: 46px;
+  line-height: 64px;
+  color: #222;
+}
+h4 {
+  font-size: 20px;
+
+  color: #222;
+}
+h6 {
+  font-weight: 700;
+
+  font-size: 12px;
+}
+p {
+  font-size: 16px;
+  color: #465b52;
+  margin: 15px 0 20px 0;
+}
+.section-p1 {
+  padding: 40px 80px;
+}
+.section-m1 {
+  padding: 40px 0;
+}
+button.normal {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px 30px;
+  color: #222;
+  background-color: #ffffff;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+}
+body {
+  width: 100%;
+}
+
+#col h4 {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+#table .table {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-collapse: collapse;
+  /* width: 800px; */
+
+  border: 1px solid rgb(206, 206, 206);
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+}
+#table .tab {
+  text-align: center;
+}
+.table tr {
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+}
+#table .table th,
+td {
+  padding: 12px;
+
+  text-align: center;
+  border-bottom: 1px solid rgb(182, 182, 182);
+}
+
+.pending {
+  text-decoration: none;
+  padding: 3px 15px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(238, 92, 8);
+  border-radius: 5px;
+}
+.completed {
+  text-decoration: none;
+  padding: 3px 15px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(37, 179, 101);
+  border-radius: 5px;
+}
+
+.remove {
+  text-decoration: none;
+  padding: 3px 15px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(55, 175, 196);
+  border-radius: 5px;
+}
+.remove:hover {
+  background-color: rgb(132, 161, 255);
+  transition: all 0.2s ease-in;
+}
+.product-remove {
+  color: #ff0000;
+  cursor: pointer;
+}
+
+.table tr:hover {
+  background-color: rgb(238, 238, 238);
+  transition: scale(1.02);
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+}
+table img {
+  height: 50px;
+}
+#head {
+  background-color: rgb(0, 164, 170);
+  color: #fff;
+}
+#order {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.place a {
+  text-decoration: none;
+  padding: 10px 20px;
+  color: rgb(255, 255, 255);
+
+  background-color: rgb(50, 139, 255);
+  border-radius: 5px;
+}
+.place a:hover {
+  background-color: rgb(83, 172, 255);
+  transition: all 0.2s ease-in;
+}
+.place h4 {
+  margin-bottom: 30px;
+}
+.place h5 {
+  margin: 20px;
+  color: rgb(54, 151, 98);
+}
+
+.mobile {
+  display: none;
+  align-items: center;
+}
+
+#close {
+  display: none;
+}
+@media (max-width: 799px) {
+  #table .tab  {
+    font-size: 12px;
+    margin: 4px;
+  }
+  #table .table th,
+  td {
+    padding: 5px;
+
+    text-align: center;
+    border-bottom: 1px solid rgb(182, 182, 182);
+  }
+  h1{
+    font-size: 12px;
+  }
+  .table input{
+    width: 50%;
+    text-align: center;
+  }
+}
