@@ -60,8 +60,11 @@ if ($userprofile) {
                                 <div class="des">
                                     
                                     <h4><?php echo $row['product_name']; ?></h4>
-                                    <span>In Stock: <b><?php echo $row['product_quantity']; ?></b> </span>
-                                    
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
                                     <h6>Rs. <?php echo $row['product_price']; ?></h6>
                                 </div>
                                 <i class="fal fa-shopping-cart cart"></i>

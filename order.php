@@ -33,8 +33,7 @@ if (mysqli_connect_error()) {
             $sql = "INSERT INTO OrderItems(order_id,product_id,product_name,product_price,product_quantity,product_village,user_id,product_image) SELECT '$order_id',product_id,product_name,product_price,product_quantity,product_village,user_id,product_image FROM cartItems";
 
             if ($con->query($sql)) {
-
-                header("location:table.php?placed=true");
+                header("location:orderdet.php?a=$order_id");
             } else {
                 echo "Error Occured";
             }

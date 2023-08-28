@@ -27,7 +27,7 @@ if ($userprofile) {
     <link rel="stylesheet" href="table.css">
     <link rel="stylesheet" href="style.css">
     <style>
-        #notify {
+        /* #notify {
             width: 300px;
             height: 200px;
             padding: 20px;
@@ -62,6 +62,51 @@ if ($userprofile) {
         .btns a {
             text-decoration: none;
             color: black;
+        } */
+        
+
+        #notify {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            padding: 30px;
+            text-align: center;
+            z-index: 999;
+        }
+
+        #notify h3 {
+            margin: 0 0 15px;
+            color: #333;
+        }
+
+        .btns {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+        .btns a {
+            /* text-decoration: none; */
+            color: white;
+        }
+
+        #close-btn {
+            background-color: rgb(55, 175, 196);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        #close-btn:hover {
+            background-color: #555;
         }
     </style>
 </head>
@@ -74,15 +119,13 @@ if ($userprofile) {
     ?>
     <center>
 
-        <div id="notify">
-            <h3>Order Placed Successfully</h3>
-            <div class="btns">
-
-                <button id="close-btn" onclick="myfun()">close</button>
-                <button id="close-btn"><a href="myorders.php">Orders</a></button>
-            </div>
-
+    <div id="notify">
+        <h3>Order Placed Successfully</h3>
+        <div class="btns">
+            <button id="close-btn" onclick="myfun()">Close</button>
+            <button id="close-btn"><a href="myorders.php">Orders</a></button>
         </div>
+    </div>
     </center>
     <center>
 
@@ -93,17 +136,7 @@ if ($userprofile) {
         <div class="tab">
 
             <table class="table">
-                <tr id="head">
-                    <th>image</th>
-                    <th>name</th>
-                    <th>village</th>
-                    <th>quantity</th>
-                    <th>price</th>
-                    <th></th>
-
-
-
-                </tr>
+                
                 <?php include('connect.php');
                 $stmt = $con->prepare("SELECT * FROM cartItems where user_id='$user_id' ");
 

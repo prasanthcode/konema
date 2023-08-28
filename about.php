@@ -52,7 +52,11 @@ if ($userprofile) {
 
         
     }
-
+    .about-container img{
+      /* margin-left: 60%; */
+      border-radius: 50%;
+      box-shadow: 0px 5px 10px rgba(0,0,0,0.2) ;
+    }
     img.profile-picture {
       display: block;
       max-width: 200px;
@@ -101,21 +105,20 @@ if ($userprofile) {
     
   <div class="about-container">
     <h1>About Me</h1>
-    <img src="gallery/user.png" alt="Profile Picture" style="max-width: 200px;">
-    <p>Hi, I'm [Your Name]! Welcome to my personal website. Here, you can learn a little bit about me, my interests, and my background.</p>
+    <img src="gallery/IMG_20230604_141058_540.jpg" alt="Profile Picture" style="max-width: 200px;">
+    <p>Hi, I'm Prasanth Gavvala! Welcome to my ecommerce website - konema. Here, you can learn a little bit about me, my interests, and my background.</p>
     <h2>Background</h2>
-    <p>I have a background in [Your Field/Area of Expertise]. I have [X] years of experience in [Specific Work/Research/Projects]. I'm passionate about [Your Passion/Interest] and love to [Something You Enjoy Doing in Your Field/Interest].</p>
-    <h2>Interests</h2>
-    <p>Aside from my professional pursuits, I have a variety of interests and hobbies. Some of my favorite activities include [Interests/Hobbies You Enjoy]. In my free time, you can often find me [Another Interest/Hobby You Engage In].</p>
-    <h2>Blog</h2>
-    <p>I also maintain a blog where I share my thoughts and insights on [Topics You Write About]. Feel free to check it out to delve deeper into my ideas and experiences.</p>
+    <p>I have a background in computer science engineering.  I'm passionate about fullstack web development and love to build websites.</p>
+    <!-- <h2>Interests</h2>
+    <p>Aside from my professional pursuits, I have a variety of interests and hobbies. Some of my favorite activities include [Interests/Hobbies You Enjoy]. In my free time, you can often find me [Another Interest/Hobby You Engage In].</p> -->
+    <!-- <h2>Blog</h2>
+    <p>I also maintain a blog where I share my thoughts and insights on [Topics You Write About]. Feel free to check it out to delve deeper into my ideas and experiences.</p> -->
     <h2>Contact Me</h2>
     <p>If you'd like to get in touch, don't hesitate to reach out. You can contact me through the following channels:</p>
     <div class="social-icons">
-      <a href="[Your LinkedIn Profile URL]"><i class="fab fa-linkedin"></i></a>
-      <a href="[Your Twitter Profile URL]"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.linkedin.com/in/prasanth-gavvala-442b4327b" target="_blank"><i class="fab fa-linkedin"></i></a>
       <a href="[Your GitHub Profile URL]"><i class="fab fa-github"></i></a>
-      <a href="[Your Instagram Profile URL]"><i class="fab fa-instagram"></i></a>
+      <a href="https://instagram.com/pintuuuuu_2?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D" target="_blank"><i class="fab fa-instagram"></i></a>
     </div>
   </div>
 

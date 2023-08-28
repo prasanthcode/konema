@@ -257,7 +257,7 @@ body {
     rgb(0, 127, 201),
     rgb(66, 226, 231)
   );
-
+  position: relative;
   /* background-image: url("gallery/pexels-tirachard-kumtanom-1001851.jpg"); */
   height: 30rem;
   width: 100%;
@@ -300,6 +300,11 @@ body {
   color: #302d2d;
   background-color: #8ed5ff;
   transition: 0.3s ease;
+}
+#hero img{
+  width: 30%;
+  position: absolute;
+  right: 15%;
 }
 #feature .fe-box {
   width: 180px;
@@ -356,7 +361,9 @@ body {
 #product1 {
   text-align: center;
 }
-
+#product1 .fa-star{
+  color: #f1cf0a;
+}
 #product1 .pro {
   width: 23%;
   min-width: 250px;
@@ -404,12 +411,12 @@ body {
 }
 #product1 .pro .des h6 {
   padding-top: 7px;
-  color: rgb(230, 38, 102);
+  color: rgb(0, 0, 0);
   font-size: 14px;
 }
 #product1 .pro .des h4 {
   padding-top: 7px;
-  color: rgb(0, 39, 71);
+  color: rgb(0, 87, 158);
   font-size: 15px;
   font-weight: 700;
 }
@@ -668,7 +675,7 @@ footer .copyright {
   #hero {
     padding: 10px;
     background-size: cover;
-    height: 200px;
+    height: 300px;
   }
   #hero h4 {
     font-size: 10px;
@@ -682,6 +689,15 @@ footer .copyright {
   #hero h1 {
     font-size: 25px;
     color: #cbebff;
+  }
+  #hero img{
+    /* width: 30%;
+    position: absolute; */
+    right: 5%;
+    display: none;
+  }
+  .fa-star{
+    font-size: 15px;
   }
   #hero p {
     color: #302d2d;

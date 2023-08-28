@@ -4,6 +4,7 @@ session_start();
 ?>
 <?php
 $userprofile = $_SESSION['user_name'];
+$userid = $_SESSION['user_id'];
 
 
 if ($userprofile == true) {
@@ -49,7 +50,7 @@ if ($userprofile == true) {
         $stmt->execute();
 
         $featured_products = $stmt->get_result();
-        $present = $con->prepare("SELECT * FROM cartItems WHERE  `product_id`='$search'");
+        $present = $con->prepare("SELECT * FROM cartItems WHERE  `product_id`='$search' ");
 
         $present->execute();
         $found = 0;
@@ -144,6 +145,11 @@ if ($userprofile == true) {
 
                                 <!-- <span>In Stock: <b><?php //echo $row['product_quantity']; 
                                                         ?></b> </span> -->
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
                                 <h6>Rs. <?php echo $row['product_price']; ?></h6>
                             </div>
 

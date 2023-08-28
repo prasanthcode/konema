@@ -5,11 +5,11 @@ session_start();
 $userprofile = $_SESSION['user_name'];
 // echo $userimg = $_SESSION['userimg'];
 
-if ($userprofile == true) {
-} else {
+// if ($userprofile == true) {
+// } else {
 
-    header("location:login.php");
-}
+//     header("location:login.php");
+// }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,11 +22,9 @@ if ($userprofile == true) {
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
     <link rel="stylesheet" href="style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-    <!-- <script>
-        $(document).ready(function() {
-            $('.welcome').fadeIn(3000);
-        });
-    </script> -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
     
 </head>
 
@@ -37,35 +35,35 @@ if ($userprofile == true) {
     
 
 
-         <h2 >Hello <?php echo $userprofile ?>!</h2>
-         <h1 >welcome back</h1> 
-        <!-- <h1 >Explore</h1> -->
-        <button>Explore</button>
+         <h2 data-aos="fade-right" data-aos-delay="500" >Welcome to Konema</h2>
+         <h1 data-aos="fade-right" data-aos-delay="500" >Shop. Save. Repeat.</h1> 
+        <img data-aos="fade-left" data-aos-delay="1000" src="gallery/pngegg (15).png" alt="" >
+        <button data-aos="fade-right" data-aos-delay="500">Explore</button>
         
 
     </section>
     <section id="feature" class="section-p1">
-        <div class="fe-box">
+        <div class="fe-box" data-aos="fade-up" data-aos-delay="500">
             <img src="gallery/f1.png" alt="feature">
             <h6>Free Shipping</h6>
         </div>
-        <div class="fe-box">
+        <div class="fe-box" data-aos="fade-up" data-aos-delay="600">
             <img src="gallery/f2.png" alt="feature">
             <h6>Online order</h6>
         </div>
-        <div class="fe-box">
+        <div class="fe-box" data-aos="fade-up" data-aos-delay="700">
             <img src="gallery/f3.png" alt="feature">
             <h6>Save money</h6>
         </div>
-        <div class="fe-box">
+        <div class="fe-box" data-aos="fade-up" data-aos-delay="800">
             <img src="gallery/f4.png" alt="feature">
             <h6>Promotions</h6>
         </div>
-        <div class="fe-box">
+        <div class="fe-box" data-aos="fade-up" data-aos-delay="900">
             <img src="gallery/f5.png" alt="feature">
             <h6>Happy sell</h6>
         </div>
-        <div class="fe-box">
+        <div class="fe-box" data-aos="fade-up" data-aos-delay="1000">
             <img src="gallery/f6.png" alt="feature">
             <h6>24/7 support</h6>
         </div>
@@ -92,19 +90,16 @@ if ($userprofile == true) {
                         <div class="des">
 
                             <h4><?php echo $row['product_name']; ?></h4>
-                            <span>In Stock: <b><?php echo $row['product_quantity']; ?></b> </span>
-
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
                             <h6>Rs. <?php echo $row['product_price']; ?></h6>
                         </div>
 
 
 
-                        <!-- <a href="cart.php?product_id=<?php //echo $row['product_id']; 
-                                                            ?>&product_name=<?php //echo $row['product_name']; 
-                                                                            ?>&product_village=<?php //echo $row['product_village']; 
-                                                                                                ?>&product_price=<?php //echo $row['product_price']; 
-                                                                                                                                                    ?>&product_quantity=<?php //echo $row['product_quantity']; 
-                                                                                                                                                                                                            ?>"><i class="fal fa-shopping-cart cart"></i></a> -->
                         <i class="fal fa-shopping-cart cart"></i>
 
 
@@ -141,16 +136,13 @@ if ($userprofile == true) {
                         <div class="des">
 
                             <h4><?php echo $row['product_name']; ?></h4>
-                            <span>In Stock: <b><?php echo $row['product_quantity']; ?></b> </span>
-
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
                             <h6>Rs. <?php echo $row['product_price']; ?></h6>
                         </div>
-                        <!-- <a href="cart.php?product_id=<?php //echo $row['product_id']; 
-                                                            ?>&product_name=<?php // echo $row['product_name']; 
-                                                                            ?>&product_village=<?php //echo $row['product_village']; 
-                                                                                                ?>&product_price=<?php //echo $row['product_price']; 
-                                                                                                                                                    ?>&product_quantity=<?php // echo $row['product_quantity']; 
-                                                                                                                                                                                                            ?>"><i class="fal fa-shopping-cart cart"></i></a> -->
                         <i class="fal fa-shopping-cart cart"></i>
 
                     </a>
@@ -197,6 +189,9 @@ if ($userprofile == true) {
     </script>
     <script src="toggle.js">
 
+    </script>
+    <script>
+        AOS.init(); 
     </script>
 
 </body>
