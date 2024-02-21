@@ -53,7 +53,20 @@ $_SESSION["userimg"]="user.png";
                 <li><a href="profile_edit.php">edit profile</a></li>
                 <li><a href="myorders.php">my orders</a></li>
                 <li><a href="#">settings</a></li>
+                <?php 
+                if($user_id){
+                ?>
                 <li><a href="logout.php">logout</a></li>
+                <?php
+                }else{
+                    ?>
+                <li><a href="login.php">login</a></li>
+
+                    <?php
+
+
+                }
+                ?>
             </div>
 
             <!-- <a href="#" id="close"><i class="far fa-times"></i></a> -->
@@ -85,11 +98,29 @@ $_SESSION["userimg"]="user.png";
                     <span>></span>
                 </a>
 
+                
+                <?php 
+                if($user_id){
+                ?>
                 <a href="logout.php" class="sublink">
                     <i class="fas fa-sign-out-alt"></i>
                     <p> Logout</p>
                     <span>></span>
                 </a>
+                <?php
+                }else{
+                    ?>
+                <a href="login.php" class="sublink">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <p> Login</p>
+                    <span>></span>
+                </a>
+
+                <?php
+
+
+                }
+                ?>
             </div>
 
         </div>

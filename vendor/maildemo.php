@@ -3,6 +3,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 require '/opt/lampp/htdocs/konema/vendor/autoload.php';
+require '../config.php';
 
 $mail = new PHPMailer(true);
 
@@ -11,8 +12,8 @@ try {
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'pintuprasanth9@gmail.com';
-    $mail->Password = 'fgpvppjxomcqpgvp';
+    $mail->Username = $email;
+    $mail->Password = $passkey;
     $mail->SMTPSecure = 'tls';
     $mail->Port = 587;
     $attachmentFilePath1 = '/opt/lampp/htdocs/konema/gallery/f1.png'; // Replace with the actual file path
@@ -20,9 +21,9 @@ try {
 
     $mail->addAttachment($attachmentFilePath1, 'image1.png'); // You can optionally specify a custom filename for the attachment
     $mail->addAttachment($attachmentFilePath2, 'image2.png');
-    $mail->setFrom('pintuprasanth9@gmail.com', 'prasanth gavvala');
+    $mail->setFrom($email, 'prasanth gavvala');
     $mail->addAddress('pintugraphics12@gmail.com');
-    $mail->addAddress('s190084@rguktsklm.ac.in');
+   
 
     $mail->isHTML(true);
     $mail->Subject = 'Subject';

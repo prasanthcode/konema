@@ -50,7 +50,7 @@ if ($userprofile == true) {
         $stmt->execute();
 
         $featured_products = $stmt->get_result();
-        $present = $con->prepare("SELECT * FROM cartItems WHERE  `product_id`='$search' ");
+        $present = $con->prepare("SELECT * FROM cartItems WHERE  `user_id`=$userid and `product_id`=$search limit 1");
 
         $present->execute();
         $found = 0;
@@ -113,6 +113,10 @@ if ($userprofile == true) {
                     }
                 }
             }
+        }
+        else{
+            header("Location: konem.php");
+            exit();
         }
         $stmt->close();
         $con->close();

@@ -8,7 +8,7 @@ $userprofile = $_SESSION['user_name'];
 if ($userprofile == true) {
 } else {
 
-    header("location:login.php");
+    // header("location:login.php");
 }
 ?>
 <?php
