@@ -1,8 +1,5 @@
 <?php
 require 'config.php';
-        // $con = new mysqli("127.0.0.1", "root", "", "ecom_project");
-         $con = new mysqli($hostname, $username, $password, $dbname);
+$con = new mysqli($hostname, $username, $password, $dbname);
 
-        // $con = new mysqli("sql301.infinityfree.com", "epiz_33053949", "DrflTEZxZXU", "epiz_33053949_ecom_project");
 
-?>
